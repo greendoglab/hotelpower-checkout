@@ -1,0 +1,572 @@
+// functions
+
+transition(p, d, t)
+    -webkit-transition-property: p;
+    -webkit-transition-duration: d;
+    -webkit-transition-timing-function: t;
+    -moz-transition-property: p;
+    -moz-transition-duration: d;
+    -moz-transition-timing-function: t;
+    -o-transition-property: p;
+    -o-transition-duration: d;
+    -o-transition-timing-function: t;
+
+boxsize()
+    box-sizing border-box
+    -moz-box-sizing border-box
+    -webkit-box-sizing border-box
+
+// variables
+
+border_bottom_solid = 1px dashed rgba(63, 11, 11, 0.3);
+text_color = #716e6e
+link_color = #047cb4
+title_color = #1783b6
+block_bottom = 3em
+box_top = 1em
+
+body
+    font: 100%/100% chaletmedium, Helvetice, arial
+    padding 0
+    margin 0
+    background #bbc6ce
+    color text_color
+
+h1, h2, h3, h4, h5
+    font-weight normal
+
+a
+    color link_color
+    transition(all, 0.3s, ease)
+    &:hover
+        text-decoration none
+
+img
+    max-width 100%
+    display block
+    text-align center
+    margin auto
+
+.if iframe,
+.if object,
+.if embed
+  /*position: absolute;*/
+  max-width 100%
+
+.cl
+    clear both
+
+// main classes
+
+.main_title
+    text-transform uppercase
+    color #333
+    font-family 'source_sans_probold'
+
+// classes
+
+.wrap
+    margin 0 auto
+    width 960px
+
+.site_header
+    background #013965
+    .top_header
+        overflow hidden
+        padding 10px 0
+        .logo
+            display inline-block
+            width 152px
+            height 71px
+            background url(../images/logo.png) no-repeat
+            float left
+        .slogan
+            float right
+            font-family source_sans_prosemibold
+            font-size 1.1em
+            margin-top 28px
+            color #fff
+    .bottom_header
+        width 943px
+        height 109px
+        padding-top 40px
+        padding-left 17px
+        background url(../images/bottom_header.png) no-repeat
+        .explaine
+            .power
+            .forless
+                display block
+                line-height 1
+            .power
+                color #6ee2eb
+                text-transform uppercase
+                font-family oswaldbold
+                font-size 1.5em
+            .forless
+                color #fff
+                text-transform uppercase
+                font-family oswaldlight
+                font-size: 2.3em
+.checkout
+    background #dadfe3
+    height 130px
+    .checkout_title
+        width 300px
+        float left
+        // text-align center
+        span
+            font-family oswaldlight
+            color #384f5b
+            text-transform uppercase
+            display inline-block
+            margin-top 58px
+            font-size 4em
+    .orange_block
+        width 660px
+        height 130px
+        float right
+        background #ea6f02 url(../images/orange_block.png) no-repeat 99% 50%
+        .final_step
+            position relative
+            width 170px
+            height 130px
+            float left
+            background #ff7800
+            text-align center
+            &:after
+                position absolute
+                bottom -19px
+                content ''
+                display block
+                width 170px
+                height 20px
+                background url(../images/arrow.png) no-repeat
+            span
+                display inline-block
+                font-family 'source_sans_probold'
+                color #fff
+                text-transform uppercase
+                font-size 3.2em
+                line-height 0.8
+                margin-top 26px
+        .signup_today
+            span
+                width 310px
+                display inline-block
+                font-family 'source_sans_proregular'
+                color #fff
+                text-transform uppercase
+                font-size 1.4em
+                line-height 1.2
+                margin-top 15px
+                margin-left 15px
+                strong
+                    font-family 'source_sans_probold'
+                br
+                    display none
+                .mobile_slice
+                    display inline !important
+
+.content
+    .wrap
+        overflow hidden
+    .main_form
+        width 660px
+        float right
+        overflow hidden
+        .account_info
+            width 300px
+            height 927px
+            float left
+            background #d1ccc8
+            padding-top 40px
+            padding-left 30px
+            padding-bottom 40px
+        .billing_info
+            width 300px
+            height 927px
+            float left
+            background #beb9b5
+            padding-top 40px
+            padding-left 30px
+            padding-bottom 40px
+            position relative
+            .finish_form
+                position absolute
+                bottom 30px
+                .agrement
+                    label
+                        width 270px
+                        position relative
+                        boxsize()
+                        padding-left 20px
+                        font-size .8em
+                        input
+                            position absolute
+                            left -5px
+                .join
+                    width 270px
+                    display block
+                    margin 30px 0
+                    font-family 'oswaldbold'
+                    font-size 1.5em
+                    color #fff
+                    background #08a8f2
+                    border-radius 8px
+                    border none
+                    border-bottom 5px solid #0686c2
+                .accredits
+                    display inline-block
+                    margin-right 30px
+        .confident
+            background #dadfe3
+            boxsize()
+            padding 27px
+            margin-top 20px
+            position relative
+            .confident_title_conf
+            .confident_title_money
+                display block
+                width 440px
+                margin 0
+                line-height 1
+            .confident_title_conf
+                font-size 2em
+                font-family oswaldlight
+            .confident_title_money
+                font-size 1.9em
+                font-family oswaldbold
+                color #1298db
+            article
+                width 172px
+                position absolute
+                top 34px
+                right 27px
+                font-size .8em
+        label
+            display block
+            font-family 'source_sans_proregular'
+            font-size 1em
+            margin 10px 0
+        input[type=text]
+            display block
+            width 270px
+            height 40px
+            border none
+            outline none
+            font-size 1em
+            padding .2em 1em
+            margin 0
+            boxsize()
+            &.postal
+                width 130px
+        .duble_select
+            overflow hidden
+        .custom_select
+            width 270px
+            position relative
+            &.left_select
+                float left
+            &.short
+                width 130px
+                &:nth-child(1)
+                    margin-right 10px
+                select
+                    width 130px
+            select
+                display: inline-block;
+                width 270px
+                height 40px
+                border none
+                outline none
+                font-size 1em
+                padding .2em 1em
+                margin 0
+                boxsize()
+                border-radius 0
+                -webkit-appearance none /* remove the strong OSX influence from Webkit */
+                -moz-appearance none
+                background #fff
+            &:after
+                content ''
+                position absolute
+                top 0
+                right 0
+                width 40px
+                height 40px
+                background url(../images/select.png) no-repeat
+                pointer-events:none;
+
+    .information
+        width 300px
+        float left
+        padding-top 40px
+        color #333
+        h3.main_title
+            color #013965
+        h4.main_title
+            font-size .9em
+            margin-bottom 0
+            margin-right 40px
+        p
+            font-size .9em
+            margin-top 0
+            margin-right 40px
+        ul
+            padding-left 20px
+            padding-right 20px
+
+    .confident_mobile
+        display none
+        background #dadfe3
+        boxsize()
+        padding 27px
+        margin-top 20px
+        position relative
+        .confident_title_conf
+        .confident_title_money
+            margin 0
+            line-height 1
+        .confident_title_conf
+            font-family oswaldlight
+        .confident_title_money
+            font-family oswaldbold
+            color #1298db
+        article
+            width 100%
+            font-size .8em
+
+.site_footer
+    margin-top 20px
+    background #253239
+    font-size .7em
+    color #90aab8
+    padding 30px 0
+    .foot_logo
+    .foot_info_1
+    .foot_info_2
+        display inline-block
+        margin-right 26px
+        vertical-align top
+    .foot_logo
+        width 112px
+        height 52px
+        background url(../images/foot_logo.png) no-repeat
+        margin-left 160px
+    .foot_info_1
+    .foot_info_2
+        width 260px
+        color #fff
+        span
+            display block
+    .copy
+        margin-top 30px
+        text-align center
+    a
+        color #90aab8
+
+@media only screen and (max-width : 320px), only screen and (max-device-width : 320px), only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait), only screen and (min-device-width : 320px) and (max-device-width : 480px), only screen and (min-device-width : 320px) and (max-device-width : 480px), only screen and (min-device-width : 320px) and (max-device-width : 568px)
+
+    
+    .wrap
+        margin 0 auto
+        width 100%
+
+    .site_header
+        .top_header
+            .logo
+                margin-left 14px
+            .slogan
+                width 140px
+                float right
+                font-family source_sans_prosemibold
+                font-size .7em
+                margin-top 20px
+                text-transform uppercase
+                color #fff
+
+        .bottom_header
+            width 100%
+            height auto
+            // padding-top 40px
+            // padding-left 17px
+            boxsize()
+            background url(../images/bottom_header_mobile.png) no-repeat 100% 0%
+            .explaine
+                .power
+                .forless
+                    display block
+                    line-height 1
+                    width 100%
+                    text-align center
+                .power
+                    margin-top 118px
+                    margin-bottom 12px
+                    color #6ee2eb
+                    text-transform uppercase
+                    font-family oswaldbold
+                    font-size 1.2em
+                .forless
+                    color #fff
+                    text-transform uppercase
+                    font-family oswaldlight
+                    font-size: 1.9em
+                    padding-bottom 16px
+
+    .checkout
+        background #dadfe3
+        height 130px
+        .checkout_title
+            width 100%
+            float none
+            text-align center
+            span
+                font-family oswaldlight
+                color #384f5b
+                text-transform uppercase
+                display inline-block
+                margin-top 12px
+                margin-bottom 12px
+                font-size 4em
+                line-height 1
+        .orange_block
+            width 100%
+            height auto !important
+            float right
+            background #ea6f02 url(../images/orange_block.png) no-repeat 99% 99%
+            background-size 40%
+            padding-bottom 60px
+            position relative
+            .final_step
+                position absolute
+                bottom 0px
+                width 170px
+                height 48px
+                float left
+                background #ff7800
+                text-align center
+                &:after
+                    position absolute
+                    bottom -19px
+                    content ''
+                    display block
+                    width 170px
+                    height 20px
+                    background url(../images/arrow.png) no-repeat
+                    z-index: 9999;
+                span
+                    display inline-block
+                    font-family 'source_sans_probold'
+                    color #fff
+                    text-transform uppercase
+                    font-size 1.5em
+                    line-height 0.8
+                    margin-top 16px
+            .signup_today
+                span
+                    width auto
+                    display inline-block
+                    font-family 'source_sans_proregular'
+                    color #fff
+                    text-transform uppercase
+                    font-size 1.2em
+                    line-height 1
+                    margin-top 15px
+                    margin-left 15px
+                    .mobile_slice
+                        display block
+                        width 140px
+                    strong
+                        font-family 'source_sans_probold'
+                    br
+                        display block
+                    .mobile_slice
+                        display block !important
+                        width 140px
+
+    .content
+        .main_form
+            width 100%
+            float none
+            .account_info
+            .billing_info
+                width 100%
+                height auto
+                float none
+                .finish_form
+                    position static
+                    margin-top 30px
+            .confident
+                display none
+        .information
+            width 80%
+            float none
+            margin 0 auto
+            padding 0 10%
+        input[type=text]
+            width 85% !important
+        .custom_select
+            width 85% !important
+            &.left_select
+                float left
+            &.short
+                width 41.3% !important
+                &:nth-child(1)
+                    margin-right 10px
+                select
+                    width 100% !important
+            select
+                width 100% !important
+
+        .confident_mobile
+            display block
+            h2
+            h3
+                display inline
+                font-size 1.6em
+            article
+                position static
+                margin-top 10px
+
+    .site_footer
+        margin-top 0
+        background #253239
+        font-size .7em
+        color #90aab8
+        padding 30px 0
+        .foot_logo
+        .foot_info_1
+        .foot_info_2
+        .copy
+            display block
+            width 90%
+            margin-right 0
+            margin 0 auto
+            vertical-align top
+            margin-bottom 16px
+        .foot_logo
+            width 112px
+            height 52px
+            background url(../images/foot_logo.png) no-repeat
+            margin-left 0
+            margin 0 auto
+            margin-bottom 20px
+        .foot_info_1
+        .foot_info_2
+            width 260px
+            color #fff
+            span
+                display block
+        .copy
+            margin-top 30px
+            text-align center
+            margin-bottom 0
+
+// @media only screen and (min-device-width : 320px) and (max-device-width : 480px)
+
+// @media only screen and (max-width : 320px), 
+// only screen and (max-device-width : 320px), 
+// only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait), 
+// only screen and (min-device-width : 320px) and (max-device-width : 480px), 
+// only screen and (min-device-width : 320px) and (max-device-width : 480px), 
+// only screen and (min-device-width : 320px) and (max-device-width : 568px)
